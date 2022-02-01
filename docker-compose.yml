@@ -7,8 +7,6 @@ services:
     image: alvarofpp/scraper-cpf
     command: python main.py
     container_name: scraper_cpf
-    healthcheck:
-      test: ["CMD", "health-checker", "localhost:5555"]
     restart: unless-stopped
     network_mode: host
     volumes:
